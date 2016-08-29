@@ -1,0 +1,9 @@
+gunzip SRR072893.fastq.gz
+
+fastqc SRR072893.fastq
+
+hisat-build BDGP6.fa BDGP6
+
+hisat2 -x BDGP6 -p 4 -U SRR072893.fastq | samtools view -Sbo | samtools sort -o SRR072893sorted.bam
+
+stringtie SRR072893sorted.bam -p -e -G BDGP6.Ensembl.85.gtf -o SRR072893.gtf  -B
