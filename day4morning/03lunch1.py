@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
-
+"""
+usage: ./04lunch2.py ~/data/results/stringtie/SRR072893/t_data.ctab ~/data/results/stringtie/SRR072915/t_data.ctab 
+"""
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
